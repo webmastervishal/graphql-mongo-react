@@ -1,0 +1,8 @@
+
+#node modules
+/node_modules
+/server/node_modules
+
+#lock files
+/yarn.lock
+/package.json.lock
