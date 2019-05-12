@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 //create a schemas
 const bookSchema = new Schema({
   name: String,
-  genre: String
+  genre: String,
+  authorid: String
 });
 
 //create model
