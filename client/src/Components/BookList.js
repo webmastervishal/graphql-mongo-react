@@ -16,11 +16,21 @@ const getBooksQuery = gql`
 `;
 
 class BookList extends React.Component {
+
+  displayBooks() {
+    const {data} = this.props;
+    if(data.loading)
+      return <p>Loading...</p>;
+    else {
+      return data.books.map(book => <li key={book.id}>{book.name} - {book.author.name}</li>);
+    }
+  }
+
   render() {
     console.log(this.props);
     return(
       <ul>
-        <li>Book List</li>
+        {this.displayBooks()}
       </ul>
     )
   }
